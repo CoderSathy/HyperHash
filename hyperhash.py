@@ -5,6 +5,7 @@ USAGE:
 
 import sys
 import importlib
+import time
 
 try:
     VERSION = '0.0.1'
@@ -37,7 +38,8 @@ try:
 
 
 
-    if(typeShit == "--crack"):
+    if(typeShit == "--crack-hide" or typeShit == "--crack"):
+            t0 = time.time()
             hashType = sys.argv[2]
             hashText = sys.argv[3]
             dictFile = sys.argv[4]
@@ -49,11 +51,15 @@ try:
 
             for line in Lines: 
                  xarr = i.hash(line.strip())
-                 print "Trying attempt [",coun,"] Text: ",line
+                 if(typeShit == "--crack"):
+                        print "Trying attempt [",coun,"] Text: ",line
                  if(xarr == hashText):
+                        t1 = time.time()
+                        total = t1-t0
                         print "Detected Hash Successfully [",coun,"] Hash: ",line
+                        print "Total time taken: ",total,"seconds"
                         sys.exit(0)
-
+                 coun += 1
 
 
     if(typeShit == "--generate"):
