@@ -32,8 +32,8 @@ try:
             print("|_ _ _ _|                               |_ _ _ _|")
             print("    |                                       |    ")
             print("    |                                       |    ")
-            print("USAGE:\nFor cracking: python cricky.py --crack [hash-type] [hash-text] [dictfile]")
-            print("For generating: python cricky.py --generate [hash-type] [hash-text]\n\n")
+            print("USAGE:\nFor cracking: python hyperhash.py --crack [hash-type] [hash-text] [dictfile]")
+            print("For generating: python hyperhash`.py --generate [hash-type] [hash-text]\n\n")
             sys.exit(0)
 
 
@@ -71,12 +71,12 @@ try:
 
 except IndexError:
             print("Something Incorrect in arguments detected.")
-            print("USAGE:\nFor cracking: python cricky.py --crack [hash-type] [hash-text] [dictfile]")
-            print("For generating: python cricky.py --generate [hash-type] [text]\n\n")
+            print("USAGE:\nFor cracking: python hyperhash.py --crack [hash-type] [hash-text] [dictfile]")
+            print("For generating: python hyperhash.py --generate [hash-type] [text]\n\n")
             sys.exit(0)
 
 except ImportError:
            print("Something Wrong with hash type you provided.")
-           print("USAGE:\nFor cracking: python cricky.py --crack [hash-type] [hash-text] [dictfile]")
-           print("For generating: python cricky.py --generate [hash-type] [text]\n\n")
+           print("USAGE:\nFor cracking: python hyperhash.py --crack [hash-type] [hash-text] [dictfile]")
+           print("For generating: python hyperhash.py --generate [hash-type] [text]\n\n")
            sys.exit(0)
